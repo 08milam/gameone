@@ -360,94 +360,98 @@ function animate() {
         })
       ) {
         console.log("hitbox");
-        moving = false;
+        player.moving = false; 
         break;
       }
     }
-
-    if (moving)
+  
+    if (player.moving) 
       moveables.forEach((moveable) => {
         moveable.position.y += 3;
       });
   } else if (keys.a.pressed) {
-    moveables.forEach((moveable) => {
-      player.moving = true;
-      player.image = player.sprites.left;
-      for (let i = 0; i < boundaries.length; i++) {
-        const boundary = boundaries[i];
-        if (
-          rectangularCllision({
-            box1: player,
-            box2: {
-              ...boundary,
-              position: {
-                x: boundary.position.x + 3,
-                y: boundary.position.y,
-              },
+    player.moving = true;
+    player.image = player.sprites.left;
+    for (let i = 0; i < boundaries.length; i++) {
+      const boundary = boundaries[i];
+      if (
+        rectangularCllision({
+          box1: player,
+          box2: {
+            ...boundary,
+            position: {
+              x: boundary.position.x + 3,
+              y: boundary.position.y,
             },
-          })
-        ) {
-          console.log("hitbox");
-          moving = false;
-          break;
-        }
+          },
+        })
+      ) {
+        console.log("hitbox");
+        player.moving = false;
+        break;
       }
-
-      if (moving) moveable.position.x += 3;
-    });
+    }
+  
+    if (player.moving) 
+      moveables.forEach((moveable) => {
+        moveable.position.x += 3;
+      });
   } else if (keys.s.pressed) {
-    moveables.forEach((moveable) => {
-      player.moving = true;
-      player.image = player.sprites.down;
-      for (let i = 0; i < boundaries.length; i++) {
-        const boundary = boundaries[i];
-        if (
-          rectangularCllision({
-            box1: player,
-            box2: {
-              ...boundary,
-              position: {
-                x: boundary.position.x,
-                y: boundary.position.y - 3,
-              },
+    player.moving = true;
+    player.image = player.sprites.down;
+    for (let i = 0; i < boundaries.length; i++) {
+      const boundary = boundaries[i];
+      if (
+        rectangularCllision({
+          box1: player,
+          box2: {
+            ...boundary,
+            position: {
+              x: boundary.position.x,
+              y: boundary.position.y - 3,
             },
-          })
-        ) {
-          console.log("hitbox");
-          moving = false;
-          break;
-        }
+          },
+        })
+      ) {
+        console.log("hitbox");
+        player.moving = false;
+        break;
       }
-
-      if (moving) moveable.position.y -= 3;
-    });
+    }
+  
+    if (player.moving) 
+      moveables.forEach((moveable) => {
+        moveable.position.y -= 3;
+      });
   } else if (keys.d.pressed) {
-    moveables.forEach((moveable) => {
-      player.moving = true;
-      player.image = player.sprites.right;
-      for (let i = 0; i < boundaries.length; i++) {
-        const boundary = boundaries[i];
-        if (
-          rectangularCllision({
-            box1: player,
-            box2: {
-              ...boundary,
-              position: {
-                x: boundary.position.x - 3,
-                y: boundary.position.y,
-              },
+    player.moving = true;
+    player.image = player.sprites.right;
+    for (let i = 0; i < boundaries.length; i++) {
+      const boundary = boundaries[i];
+      if (
+        rectangularCllision({
+          box1: player,
+          box2: {
+            ...boundary,
+            position: {
+              x: boundary.position.x - 3,
+              y: boundary.position.y,
             },
-          })
-        ) {
-          console.log("hitbox");
-          moving = false;
-          break;
-        }
+          },
+        })
+      ) {
+        console.log("hitbox");
+        player.moving = false; 
+        break;
       }
-
-      if (moving) moveable.position.x -= 3;
-    });
+    }
+  
+    if (player.moving) 
+      moveables.forEach((moveable) => {
+        moveable.position.x -= 3;
+      });
   }
+  
 }
 animate();
 
