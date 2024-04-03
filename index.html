@@ -22,10 +22,18 @@
         h2{ 
             color: #fff;
         }
+        .no-select {
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+          }
       </style>
       <canvas></canvas>
       <h2>keys to move: w, a, s , d</h2>
-      <div>
+      <div class="no-select">
         <button id="wButton"></button>
         <button id="aButton"></button>
         <button id="sButton"></button>
