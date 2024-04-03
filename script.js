@@ -514,30 +514,22 @@ function handleMouseUp(key) {
 }
 
 // ASSIGN EVENT LISTENTERS TO BUTTONS
-document
-  .getElementById("wButton")
-  .addEventListener("mousedown", handleMouseDown(keys.w));
-document
-  .getElementById("wButton")
-  .addEventListener("mouseup", handleMouseUp(keys.w));
+document.getElementById("wButton").addEventListener("mousedown", handleMouseDown(keys.w));
+document.getElementById("wButton").addEventListener("touchstart", handleMouseDown(keys.w));
+document.getElementById("wButton").addEventListener("mouseup", handleMouseUp(keys.w));
+document.getElementById("wButton").addEventListener("touchend", handleMouseUp(keys.w));
 
-document
-  .getElementById("aButton")
-  .addEventListener("mousedown", handleMouseDown(keys.a));
-document
-  .getElementById("aButton")
-  .addEventListener("mouseup", handleMouseUp(keys.a));
+document.getElementById("aButton").addEventListener("mousedown", handleMouseDown(keys.a));
+document.getElementById("aButton").addEventListener("touchstart", handleMouseDown(keys.a));
+document.getElementById("aButton").addEventListener("mouseup", handleMouseUp(keys.a));
+document.getElementById("aButton").addEventListener("touchend", handleMouseUp(keys.a));
 
-document
-  .getElementById("sButton")
-  .addEventListener("mousedown", handleMouseDown(keys.s));
-document
-  .getElementById("sButton")
-  .addEventListener("mouseup", handleMouseUp(keys.s));
+document.getElementById("sButton").addEventListener("mousedown", handleMouseDown(keys.s));
+document.getElementById("sButton").addEventListener("touchstart", handleMouseDown(keys.s));
+document.getElementById("sButton").addEventListener("mouseup", handleMouseUp(keys.s));
+document.getElementById("sButton").addEventListener("touchend", handleMouseUp(keys.s));
 
-document
-  .getElementById("dButton")
-  .addEventListener("mousedown", handleMouseDown(keys.d));
-document
-  .getElementById("dButton")
-  .addEventListener("mouseup", handleMouseUp(keys.d));
+document.getElementById("dButton").addEventListener("mousedown", handleMouseDown(keys.d));
+document.getElementById("dButton").addEventListener("touchstart", handleMouseDown(keys.d));
+document.getElementById("dButton").addEventListener("mouseup", handleMouseUp(keys.d));
+document.getElementById("dButton").addEventListener("touchend", handleMouseUp(keys.d));
